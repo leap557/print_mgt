@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <title>Add Printer</title>
+    </head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center fixed-top">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index/">Printer</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="mt/">Maintenance</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="users/">User</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="ops/">Operational</a>
+            </li>
+        </ul>
+    </nav>
+<div class="container mt-3">
+    <form action="addrecord/" method='post'>
+        {% csrf_token %}
+        <div class="mb-3 mt-3">
+            <label for="printer">Nama Printer:</label>
+            <input type="text" class="form-control" id="printer" placeholder="Nama Printer" name="printer_name">
+        </div>
+        <div class="mb-3">
+            <label for="printer">Driver:</label>
+            <input type="text" class="form-control" id="printer" placeholder="Nama Driver" name="driver">
+        </div>
+        <div class="mb-3">
+            <label for="printer">Manufacture:</label>
+            <input type="text" class="form-control" id="printer" placeholder="Manufacture" name="manufacture">
+        </div>
+        <div class="mb-3">
+            <label for="printer">IP Address:</label>
+            <input type="text" class="form-control" id="printer" placeholder="IP Address" name="ip_address">
+        </div>
+        <div class="mb-3">
+            <label for="printer">Lokasi:</label>
+            <input type="text" class="form-control" id="printer" placeholder="Lokasi" name="lokasi">
+        </div>
+            <label for="printer" class="form-label">Pilih Warna</label>
+            <select class="form-select" id="printer" name="warna">
+                <option>Monochrome</option>
+                <option>Berwarna</option>
+            </select>
+        <div class="d-grid">
+             <button type="submit" class="btn btn-success mt-3 btn-block">Submit</button>
+        </div>
+    </form>
+  </div>
+</body>
+</html>
